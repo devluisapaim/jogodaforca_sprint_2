@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo.svg" alt="">
+    </header>
+
+    <main>
+        <div id="game">
+            <div id="menu" class="menu-buttons">
+                <button onclick="startGame()">Começar a jogar</button>
+                <button onclick="addWord()">Adcionar nova palavra</button>
+            </div>
+
+            <div id="new-word" style="display: none;">
+                    <textarea name="" id="" placeholder="Digite uma palavra ou frase."></textarea>
+                    <div class="textarea-buttons">
+                        <div class="warning">
+                            <img src="img/!_icon.svg" alt=""> <p>Apenas letras minúsculas e sem acento.</p>
+                        </div>
+                        <div class="new-word-buttons">
+                            <button>Salvar e começar</button>
+                            <button onclick="cancelAddWord()">Cancelar</button>
+                        </div>
+                    </div>
+            </div>
+
+            <div id="start-game" style="display: none;">
+                <div class="hangman-game">
+                    <div id="hangman"> <!--onde colocar o boneco-->
+                    </div>
+                    <div id="word">  <!--onde colocar os traços para as letras-->
+                    </div>
+                    <div class="game-buttons">
+                        <button>Novo jogo</button>
+                        <button onclick="giveUpGame()">Desistir</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>       
+    </main>
+    
+</body>
+    <script src="/script.js"></script>
+</html>
