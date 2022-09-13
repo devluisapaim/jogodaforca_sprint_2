@@ -4,33 +4,36 @@
     --background: #F3F5FC;
 }
 
-* {
+body {
     background-color: var(--background);
+    max-width: 1200px;
+    max-height: 800px;
 }
 
 header img {
-    margin-top: 4vh;
+    margin-top: 2vh;
     margin-left: 3vw;
-    width: 8%;
+    width: 10%;
 }
 
 #game {
-    /* border: 1px solid gray; */
+    border: 1px solid gray;
     width: 60%;
-    height: 500px;
-    margin: 1em auto;
+    height: 550px;
+    margin-top: -2em;
+    margin-left: 20em;
+    margin-right: auto;
+    text-align: center;
 }
 
 /* menu */
 
 .menu-buttons {
-    display: flex;
-    flex-direction: column;
-    margin: 10em auto;
-    align-items: center; 
+    width: 50%;
+    margin: 8em auto;
 }
 
-.menu-buttons button {
+.menu-buttons button {    
     width: 232px;
     height: 70px;
 }
@@ -108,4 +111,18 @@ textarea::placeholder {
 .hangman-game {
     display: flex;
     flex-direction: column;
+}
+
+#game-hangman {
+    border: 1px solid black;
+    width: 80%;
+    height: 330px;
+    margin-bottom: 0.5em;
+}
+
+#game-word {
+    border: 1px solid red;
+    width: 80%;
+    height: 120px;
+    margin: 1em 0;
 }

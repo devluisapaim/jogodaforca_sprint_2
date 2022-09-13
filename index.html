@@ -15,7 +15,7 @@
 
     <main>
         <div id="game">
-            <div id="menu" class="menu-buttons">
+            <div id="menu" class="menu-buttons" style="display: none;">
                 <button onclick="startGame()">Começar a jogar</button>
                 <button onclick="addWord()">Adcionar nova palavra</button>
             </div>
@@ -33,9 +33,11 @@
                     </div>
             </div>
 
-            <div id="start-game" style="display: none;">
+            <div id="start-game">
                 <div class="hangman-game">
                     <div id="hangman"> <!--onde colocar o boneco-->
+                        <canvas id="game-hangman"></canvas>
+                        <canvas id="game-word"></canvas>
                     </div>
                     <div id="word">  <!--onde colocar os traços para as letras-->
                     </div>
