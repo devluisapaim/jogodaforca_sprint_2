@@ -1,7 +1,17 @@
+//Seletores
+let tabuleiro = document.getElementById('hangman').getContext('2d');
+let words = ["HTML", "TESTE", "TESTANDO", "NOVAMENTE", "OUTRO", "DESAFIO"];
+let secretWord = "";
+
+function chooseSecretWord() {
+    let word = words[Math.floor(Math.random() * words.length)];
+    secretWord = word;
+    console.log(secretWord);
+}
+
 function addWord() {
     document.querySelector("#menu").style.display = "none";
     document.querySelector("#new-word").style.display = "block";
-
 }
 
 function cancelAddWord() {
@@ -17,15 +27,27 @@ function giveUpGame() {
 function startGame() {
     document.querySelector("#menu").style.display = "none";
     document.querySelector("#start-game").style.display = "block";
+    chooseSecretWord();
+    drawCanvas();
+    drawLines();
 }
 
-var hangman = document.getElementById('game-hangman');
-var manPincel = hangman.getContext('2d');
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 manPincel.fillStyle = "rgb(0, 0, 0)";
-// manPincel.fillRect (10, 10, 55, 50);
-// manPincel.fillStyle = "rgba(0, 0, 200, 0.5)";
-// manPincel.fillRect (30, 30, 55, 50);
 
 function drawBase() {
     manPincel.beginPath();
@@ -98,18 +120,15 @@ function drawLegTwo() {
     manPincel.closePath();
 }
 
-let funcoes = [drawBase(), drawPost(), drawTop(), drawRope(), drawHead(), drawBody(), drawArmOne(), drawArmTwo(), drawLegOne(), drawLegTwo()]
+function drawHangMan() {
+    //chamar função por funcao em cada erro
+    /*    let funcoes = [drawBase(), drawPost(), drawTop(), drawRope(), drawHead(), drawBody(), drawArmOne(), drawArmTwo(), drawLegOne(), drawLegTwo()]
+    let funcoes = [[drawBase()], [drawPost()], [drawTop()], [drawRope()], [drawHead()], [drawBody()], [drawArmOne()], [drawArmTwo()], [drawLegOne()], [drawLegTwo()]];
 
-console.log(typeof(funcoes));
-
-
-// function drawHangMan() {
-//     let funcoes = [drawBase(), drawPost(), drawTop(), drawRope(), drawHead(), drawBody(), drawArmOne(), drawArmTwo(), drawLegOne(), drawLegTwo()]
-
-//     for (let x; x <= 5; x++) {
-//         funcoes[x];
-//     }
-// }
+    for (let x; x <= 5; x++) {
+        funcoes[x];
+    }
+}*/
 
 
 

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="startGame()">
     <header>
         <img src="img/logo.svg" alt="">
     </header>
@@ -35,22 +35,37 @@
 
             <div id="start-game">
                 <div class="hangman-game">
-                    <div id="hangman"> <!--onde colocar o boneco-->
-                        <canvas id="game-hangman"></canvas>
-                        <canvas id="game-word"></canvas>
-                    </div>
-                    <div id="word">  <!--onde colocar os traços para as letras-->
-                    </div>
+                    <canvas id="hangman" width="1200px" height="800px"></canvas>
                     <div class="game-buttons">
-                        <button onclick="drawHangMan()">Novo jogo</button>
+                        <button onclick="startGame()">Novo jogo</button>
                         <button onclick="giveUpGame()">Desistir</button>
                     </div>
                 </div>
-            </div>
-            
+            </div>           
         </div>       
     </main>
     
+    <footer>
+        <p>Desenvolvido por Luísa Cristina.</p>
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/feed/" target="_blank">
+                    <img src="/img/linkedin.png" alt="Ícone LinkedIn">
+                </a>
+            </li>
+            <li>
+                <a src="" href="https://github.com/luisacpaim" target="_blank">
+                    <img src="/img/github.png" alt="Ícone Github">
+                </a>
+            </li>
+            <li>                
+                <a href="mailto:luisac.paim@hotmail.com" target="_blank">
+                    <img src="/img/email.png" alt="Ícone E-mail">
+                </a>
+            </li>
+        </ul>
+    </footer>
 </body>
-    <script src="/script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="canva.js"></script>
 </html>
