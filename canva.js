@@ -23,8 +23,8 @@ function drawLines() {
 
     let width = 600/secretWord.length
     for (let i = 0; i < secretWord.length; i++) {
-        tabuleiro.moveTo(350 + (width * i), 640);
-        tabuleiro.lineTo(400 + (width * i), 640);
+        tabuleiro.moveTo(330 + (width * i), 640);
+        tabuleiro.lineTo(380 + (width * i), 640);
     }
     tabuleiro.stroke();
     tabuleiro.closePath();

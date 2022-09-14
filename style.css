@@ -10,20 +10,26 @@ header img {
     width: 8%;
 }
 
+* {
+    background-color: #F3F5FC;
+}
+
 /* menu */
-.menu-buttons {
-    width: 50%;
+#menu {
+    border: 1px solid green;
+    width: 30%;
     margin: 10em auto;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
-.menu-buttons button {    
+#menu button {    
     width: 232px;
     height: 70px;
 }
-.menu-buttons button:first-child {
+#menu button:first-child {
     width: 280px;
     font-size: larger;
     margin: 1em;
@@ -52,7 +58,7 @@ button:last-child {
 
 /* new-word */
 #new-word {
-    width: 85%;
+    width: 50%;
     margin: 4em auto;
     display: flex;
     flex-direction: column;
@@ -91,26 +97,18 @@ textarea::placeholder {
     text-align: center;
 }
 
-.game-buttons {
-    margin-bottom: 1em
-}
-
 /* footer */
-
 footer {
     text-align: center;
     margin-top: 2em;
 }
-
 footer p {
     font-size: 15px;
 }
-
 footer li {
     display: inline-block;
     margin-top: 0.5em;
-}
-  
+}  
 footer li img {
     width: 20px;
 }
