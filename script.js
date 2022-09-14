@@ -19,86 +19,106 @@ function startGame() {
     document.querySelector("#start-game").style.display = "block";
 }
 
-
 var hangman = document.getElementById('game-hangman');
 var manPincel = hangman.getContext('2d');
 
-manPincel.fillStyle = "rgba(214, 77, 0, 1)";
+manPincel.fillStyle = "rgb(0, 0, 0)";
 // manPincel.fillRect (10, 10, 55, 50);
 // manPincel.fillStyle = "rgba(0, 0, 200, 0.5)";
 // manPincel.fillRect (30, 30, 55, 50);
 
-//function drawLine() -> base
-manPincel.beginPath();
-manPincel.moveTo(40,140);
-manPincel.lineTo(230,140);
-manPincel.stroke();
-manPincel.closePath(); 
-
-//function drawLine() -> poste
-manPincel.beginPath();
-manPincel.moveTo(85,140);
-manPincel.lineTo(85,25);
-manPincel.stroke();
-manPincel.closePath(); 
-
-//function drawLine() -> base-topo
-manPincel.beginPath();
-manPincel.moveTo(85,26);
-manPincel.lineTo(190,26);
-manPincel.stroke();
-manPincel.closePath(); 
-
-//function drawLine() -> corda
-manPincel.beginPath();
-manPincel.moveTo(189,25);
-manPincel.lineTo(189,42);
-manPincel.stroke();
-manPincel.closePath();
-
-//function drawLine() -> cabeça
+function drawBase() {
+    manPincel.beginPath();
+    manPincel.moveTo(40,140);
+    manPincel.lineTo(230,140);
+    manPincel.stroke();
+    manPincel.closePath(); 
+}
+function drawPost() {
+    manPincel.beginPath();
+    manPincel.moveTo(85,140);
+    manPincel.lineTo(85,25);
+    manPincel.stroke();
+    manPincel.closePath(); 
+}
+function drawTop() {
+    manPincel.beginPath();
+    manPincel.moveTo(85,26);
+    manPincel.lineTo(190,26);
+    manPincel.stroke();
+    manPincel.closePath(); 
+}
+function drawRope() {
+    manPincel.beginPath();
+    manPincel.moveTo(189,25);
+    manPincel.lineTo(189,42);
+    manPincel.stroke();
+    manPincel.closePath();
+}
+function drawHead() {
 //manPincel.arc(x, y, radius, startAngle, endAngle, anticlockwise);
-manPincel.beginPath();
-manPincel.arc(189, 51, 10, 0, Math.PI * 2, true);
-manPincel.stroke();
-manPincel.closePath();
+    manPincel.beginPath();
+    manPincel.arc(189, 51, 10, 0, Math.PI * 2, true);
+    manPincel.stroke();
+    manPincel.closePath();
+}
+function drawBody() {
+    manPincel.beginPath();
+    manPincel.moveTo(189,60);
+    manPincel.lineTo(189,110);
+    manPincel.stroke();
+    manPincel.closePath();
+}
+function drawArmOne() {
+    manPincel.beginPath();
+    manPincel.moveTo(189,60);
+    manPincel.lineTo(178,80);
+    manPincel.stroke();
+    manPincel.closePath();
+}
+function drawArmTwo() {
+    manPincel.beginPath();
+    manPincel.moveTo(189,60);
+    manPincel.lineTo(199,80);
+    manPincel.stroke();
+    manPincel.closePath();
+}
+function drawLegOne() {
+    manPincel.beginPath();
+    manPincel.moveTo(189,110);
+    manPincel.lineTo(179,130);
+    manPincel.stroke();
+    manPincel.closePath();
+}
+function drawLegTwo() {
+    manPincel.beginPath();
+    manPincel.moveTo(189,110);
+    manPincel.lineTo(199,130);
+    manPincel.stroke();
+    manPincel.closePath();
+}
 
-//function drawLine() -> corpo
-manPincel.beginPath();
-manPincel.moveTo(189,60);
-manPincel.lineTo(189,110);
-manPincel.stroke();
-manPincel.closePath();
+let funcoes = [drawBase(), drawPost(), drawTop(), drawRope(), drawHead(), drawBody(), drawArmOne(), drawArmTwo(), drawLegOne(), drawLegTwo()]
 
-//function drawLine() -> braço 1
-manPincel.beginPath();
-manPincel.moveTo(189,60);
-manPincel.lineTo(178,80);
-manPincel.stroke();
-manPincel.closePath();
-
-//function drawLine() -> braço 2
-manPincel.beginPath();
-manPincel.moveTo(189,60);
-manPincel.lineTo(199,80);
-manPincel.stroke();
-manPincel.closePath();
-
-//function drawLine() -> perna 1
-manPincel.beginPath();
-manPincel.moveTo(189,110);
-manPincel.lineTo(179,130);
-manPincel.stroke();
-manPincel.closePath();
-
-//function drawLine() -> perna 2
-manPincel.beginPath();
-manPincel.moveTo(189,110);
-manPincel.lineTo(199,130);
-manPincel.stroke();
-manPincel.closePath();
+console.log(typeof(funcoes));
 
 
+// function drawHangMan() {
+//     let funcoes = [drawBase(), drawPost(), drawTop(), drawRope(), drawHead(), drawBody(), drawArmOne(), drawArmTwo(), drawLegOne(), drawLegTwo()]
+
+//     for (let x; x <= 5; x++) {
+//         funcoes[x];
+//     }
+// }
+
+
+
+
+
+
+
+
+/*
 var word = document.getElementById('game-word');
 var wordPincel = word.getContext('2d');
 
@@ -106,7 +126,58 @@ wordPincel.fillStyle = "rgba(214, 77, 0, 1)";
 
 //primeira 
 wordPincel.beginPath();
-wordPincel.moveTo(40,140);
-wordPincel.lineTo(230,140);
+wordPincel.moveTo(10,100);
+wordPincel.lineTo(60,100);
 wordPincel.stroke();
-wordPincel.closePath(); 
+wordPincel.closePath();
+
+//segunda 
+wordPincel.beginPath();
+wordPincel.moveTo(10,100);
+wordPincel.lineTo(60,100);
+wordPincel.stroke();
+wordPincel.closePath();
+
+//terceira 
+wordPincel.beginPath();
+wordPincel.moveTo(10,100);
+wordPincel.lineTo(60,100);
+wordPincel.stroke();
+wordPincel.closePath();
+
+//quarta 
+wordPincel.beginPath();
+wordPincel.moveTo(10,100);
+wordPincel.lineTo(60,100);
+wordPincel.stroke();
+wordPincel.closePath();
+
+//quinta 
+wordPincel.beginPath();
+wordPincel.moveTo(10,100);
+wordPincel.lineTo(60,100);
+wordPincel.stroke();
+wordPincel.closePath();
+
+//sexta 
+wordPincel.beginPath();
+wordPincel.moveTo(10,100);
+wordPincel.lineTo(60,100);
+wordPincel.stroke();
+wordPincel.closePath();
+
+//setima 
+wordPincel.beginPath();
+wordPincel.moveTo(10,100);
+wordPincel.lineTo(60,100);
+wordPincel.stroke();
+wordPincel.closePath();
+
+//oitava 
+wordPincel.beginPath();
+wordPincel.moveTo(10,100);
+wordPincel.lineTo(60,100);
+wordPincel.stroke();
+wordPincel.closePath();
+
+*/
