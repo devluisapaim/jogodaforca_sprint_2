@@ -16,7 +16,6 @@ header img {
 
 /* menu */
 #menu {
-    border: 1px solid green;
     width: 30%;
     margin: 10em auto;
 
@@ -62,16 +61,28 @@ button:last-child {
     margin: 4em auto;
     display: flex;
     flex-direction: column;
+    text-align: center;
+    justify-content: center;
 }
 textarea {
     width: 100%;
     height: 250px;
-    border: none;
+    border: 1px solid #e48650;
+    border-radius: 10px;
+
     margin-bottom: 4em;
 }
 textarea::placeholder {
     font-size: 20px;
     color: var(--darkOrange);
+}
+.saveWord {
+    width: 30%;
+    margin-bottom: 1em;
+    background-color: var(--darkOrange);
+    color: white;
+    border: 1px solid var(--darkOrange);
+    border-radius: 10px;
 }
 .textarea-buttons {
     margin-left: 1em;

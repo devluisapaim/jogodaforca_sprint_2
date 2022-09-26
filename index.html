@@ -21,13 +21,15 @@
             </div>
 
             <div id="new-word" style="display: none;">
-                    <textarea name="" id="" placeholder="Digite uma palavra ou frase."></textarea>
+                    <textarea name="" id="inputNewWord" placeholder="Digite uma palavra ou frase."></textarea>                        
+                    <button class="saveWord" onclick="addNewWord()">Salvar palavra</button>
+
                     <div class="textarea-buttons">
                         <div class="warning">
                             <img src="img/!_icon.svg" alt=""> <p>Apenas letras minúsculas e sem acento.</p>
                         </div>
                         <div class="new-word-buttons">
-                            <button>Salvar e começar</button>
+                            <button onclick="startGame()">Começar jogo</button>
                             <button onclick="cancelAddWord()">Cancelar</button>
                         </div>
                     </div>
@@ -68,4 +70,5 @@
 </body>
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="canva.js"></script>
+    <script type="text/javascript" src="hangman.js"></script>
 </html>

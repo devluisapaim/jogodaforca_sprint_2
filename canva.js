@@ -23,10 +23,54 @@ function drawLines() {
 
     let width = 600/secretWord.length
     for (let i = 0; i < secretWord.length; i++) {
-        tabuleiro.moveTo(330 + (width * i), 640);
+        tabuleiro.moveTo(320 + (width * i), 640);
         tabuleiro.lineTo(380 + (width * i), 640);
     }
     tabuleiro.stroke();
     tabuleiro.closePath();
     console.log(width);
+}
+
+//Escrever a letra correta
+function writeCorrectLetter(index) {
+    tabuleiro.font = "bold 52px Inter";
+    tabuleiro.lineCap = "round";
+    tabuleiro.fillStyle = "#D64D00";
+    
+    tabuleiro.lineWidth = 6;
+    let width = 600/secretWord.length;
+    tabuleiro.fillText(secretWord[index], 330 + (width * index), 630);
+    console.log(secretWord[index])
+}
+
+//Escrever a letra incorreta
+function writeIncorrectLetter(letter, erros) {
+    tabuleiro.font = "bold 40px Inter";
+    tabuleiro.lineCap = "round";
+    tabuleiro.fillStyle = "#D64D00";
+    
+    tabuleiro.lineWidth = 4;
+    tabuleiro.fillText(letter, 360 + (40 * (10 - erros)), 700, 40)
+
+    drawHangMan(erros);
+}
+
+function endGame() {
+    tabuleiro.font = "bold 52px";
+    tabuleiro.lineCap = "round";
+    tabuleiro.fillStyle = "#CA2501";
+    
+    tabuleiro.lineWidth = 6;
+    tabuleiro.fillText("Você perdeu!", 750, 330)
+}
+
+function winGame() {
+    tabuleiro.font = "bold 52px";
+    tabuleiro.lineCap = "round";
+    tabuleiro.fillStyle = "#47AF48";
+    
+    tabuleiro.lineWidth = 6;
+    tabuleiro.fillText("Você ganhou!", 750, 330)
+
+    yesLetters = [];
 }
