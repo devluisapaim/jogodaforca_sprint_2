@@ -70,20 +70,3 @@ function winGame() {
     tabuleiro.lineWidth = 6;
     tabuleiro.fillText("Você ganhou!", 750, 330)
 }
-
-
-function verificarJogo() {
-    if (erros >= 6) {
-        gameOver();
-        return
-    }
-
-    let ganhou = true;
-    if (acertos < palavraDaVez.length) {
-        ganhou = false;
-    }
-
-    if (ganhou) {
-        gameWin();
-    }
-}
