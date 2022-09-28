@@ -4,7 +4,7 @@
 <img src="/img/logo.svg" alt="Logo do Jogo">
 </p>
 
-### Jogo da forca! Descubra a palavra e adicione outras.
+### Descubra a palavra e adicione outras para jogar mais vezes.
 
 <p align="center">
 ✅ Projeto concluído! ✅
@@ -13,7 +13,7 @@
 ## 📁 Acesso ao projeto (clique na imagem): 
 <p align="center">
 <a href="https://devluisapaim.github.io/jogodaforca_sprint_2/" target="_blank">
-<img src="/imgs/jgforca.png/" alt="Imagem com link para o jogo"> </a>
+<img src="/img/jgforca.png/" alt="Imagem com link para o jogo"> </a>
 </p>
 
 ### :hammer: Funcionalidades do projeto
