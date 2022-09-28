@@ -28,7 +28,6 @@ function drawLines() {
     }
     tabuleiro.stroke();
     tabuleiro.closePath();
-    console.log(width);
 }
 
 //Escrever a letra correta
@@ -40,7 +39,6 @@ function writeCorrectLetter(index) {
     tabuleiro.lineWidth = 6;
     let width = 600/secretWord.length;
     tabuleiro.fillText(secretWord[index], 330 + (width * index), 630);
-    console.log(secretWord[index])
 }
 
 //Escrever a letra incorreta
@@ -71,6 +69,21 @@ function winGame() {
     
     tabuleiro.lineWidth = 6;
     tabuleiro.fillText("Você ganhou!", 750, 330)
+}
 
-    yesLetters = [];
+
+function verificarJogo() {
+    if (erros >= 6) {
+        gameOver();
+        return
+    }
+
+    let ganhou = true;
+    if (acertos < palavraDaVez.length) {
+        ganhou = false;
+    }
+
+    if (ganhou) {
+        gameWin();
+    }
 }

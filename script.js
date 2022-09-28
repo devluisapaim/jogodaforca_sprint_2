@@ -2,6 +2,7 @@ let tabuleiro = document.getElementById('hangman').getContext('2d');
 let words = ["HTML", "TESTE", "TESTANDO", "NOVAMENTE", "OUTRO", "DESAFIO"];
 let secretWord = "";
 let erros = 8;
+let acertos = 0;
 let letters = [];
 let noLetters= [];
 let yesLetters = [];
@@ -50,7 +51,17 @@ function startGame() {
     document.querySelector("#new-word").style.display = "none";
     chooseSecretWord();
 
+    acertos = 0;
     erros = 8;
+    yesLetters = [];
+    wordLetter = [];
+
+    for (x = 0; x <= secretWord.length; x++) {
+        if (wordLetter.includes(secretWord[x]) == false)  {
+            wordLetter.push(secretWord[x]);
+        }
+    }
+    wordLetter.pop();
 
     drawCanvas();
     drawLines();
@@ -61,28 +72,45 @@ function startGame() {
         if (erros > 0) {
             let letter = e.key.toUpperCase()
         
-            if (checkLetter(letter) && secretWord.includes(letter)) {
+            if (checkLetter(letter) && secretWord.includes(letter)) {                
             //Saber se a palavra secreta inclui a letra digitada
                 for (let i = 0; i < secretWord.length; i++) {
                     if (secretWord[i] === letter) {
                         writeCorrectLetter(i);
+
+                        if (yesLetters.length != secretWord.length && yesLetters.includes(letter) == false) {
+                            yesLetters.push(letter);
+                        }                                           
                     }
                 }
-                //yesLetters.push(letter);
-                
-                // if () {
-                //     winGame();
-                // }
+           
             } else {
                 countErrors(letter);      
-                writeIncorrectLetter(letter, erros);
-                //noLetters.push(letter);
-                
+                writeIncorrectLetter(letter, erros);               
+            }
+
+            //SORT
+            wordLetter.sort();
+            yesLetters.sort(); 
+
+            //SHOW
+            console.log("wordLetter", wordLetter);
+            console.log("yesLetters: ", yesLetters);  
+            
+            //JOIN
+            let wordLetters = wordLetter.join("");
+            let simLetters = yesLetters.join("");
+
+            //SHOW
+            console.log("wordLetter", wordLetter);
+            console.log("yesLetters: ", yesLetters);  
+
+            //COMPARE
+            if (wordLetters === simLetters) {
+                console.log("IGUAIS")
+                winGame();
             }
         } 
-        // console.log('no', noLetters);
-        // console.log('yes', yesLetters);
-
     }
 }
 
