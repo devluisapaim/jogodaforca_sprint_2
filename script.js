@@ -3,8 +3,9 @@ let words = ["LOGICA", "HTML", "CSS", "FORCA", "ESTUDO", "DESAFIO"];
 let secretWord = "";
 let erros = 8;
 let letters = [];
-let noLetters= [];
 let yesLetters = [];
+let sortedYesLetters;
+let sortedWordLetters;
 
 function chooseSecretWord() {
     let word = words[Math.floor(Math.random() * words.length)];
@@ -84,11 +85,10 @@ function startGame() {
         } 
 
     }
-    } while (wordLetters != simLetters);
+    } while (sortedWordLetters != sortedYesLetters);
 
 }
    
-
 function addNewWord() {
     newWord = document.getElementById("inputNewWord").value.toUpperCase();
     words.push(newWord);
@@ -114,12 +114,11 @@ function checkWin() {
   yesLetters.sort(); 
 
   //JOIN
-  let wordLetters = lettersInTheWord.join("");
-  let simLetters = yesLetters.join("");
+  sortedWordLetters = lettersInTheWord.join("");
+  sortedYesLetters = yesLetters.join("");
 
   //COMPARE
-  if (wordLetters === simLetters) {
-      console.log("IGUAIS")
+  if (sortedWordLetters === sortedYesLetters) {
       winGame();
   }
 }
