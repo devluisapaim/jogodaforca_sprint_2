@@ -12,8 +12,8 @@
 
 ## 📁 Acesso ao projeto (clique na imagem): 
 <p align="center">
-<a href="https://github.com/devluisapaim/jogodaforca_sprint_2" target="_blank">
-<img src="/imgs/jgforca.png/" alt="Imagem com link para aplicação"> </a>
+<a href="https://devluisapaim.github.io/jogodaforca_sprint_2/" target="_blank">
+<img src="/imgs/jgforca.png/" alt="Imagem com link para o jogo"> </a>
 </p>
 
 ### :hammer: Funcionalidades do projeto

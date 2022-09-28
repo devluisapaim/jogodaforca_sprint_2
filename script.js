@@ -1,5 +1,5 @@
 let tabuleiro = document.getElementById('hangman').getContext('2d');
-let words = ["HTML", "TESTE", "TESTANDO", "NOVAMENTE", "OUTRO", "DESAFIO"];
+let words = ["LOGICA", "HTML", "CSS", "FORCA", "ESTUDO", "DESAFIO"];
 let secretWord = "";
 let erros = 8;
 let letters = [];
@@ -93,6 +93,8 @@ function addNewWord() {
     newWord = document.getElementById("inputNewWord").value.toUpperCase();
     words.push(newWord);
     document.getElementById("inputNewWord").value = "";
+
+    //CONDIONAR PALAVRA <= 8 LETRAS
 }
 
 function wordLetters() {
