@@ -108,6 +108,11 @@ textarea::placeholder {
     text-align: center;
 }
 
+/* #hangman {
+    width: 1200px;
+    height:800px;
+} */
+
 /* footer */
 footer {
     text-align: center;
@@ -122,4 +127,47 @@ footer li {
 }  
 footer li img {
     width: 20px;
+}
+
+@media (max-width:810px) {
+    header img {
+        width: 15%;
+    }
+
+    #menu {
+        width: 50%;
+    }
+
+    canvas {
+        width: 100%;
+        margin-bottom: 5em;
+    }
+}
+
+@media (max-width:428px) {
+    header img {
+        width: 25%;
+    }
+
+    #menu {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #menu button {
+        width: 200px;
+        height: 60px;
+    }
+
+    .game-buttons button {
+        margin: 0.5em auto;
+        width: 150px;
+        height: 50px;
+    }
+
+    footer {
+        margin-top: 5em;
+    }
 }
