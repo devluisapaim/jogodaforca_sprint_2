@@ -142,6 +142,11 @@ footer li img {
         width: 100%;
         margin-bottom: 5em;
     }
+
+    #new-word button {
+        width: 150px;
+        height: 50px;
+    }
 }
 
 @media (max-width:500px) {
@@ -161,12 +166,15 @@ footer li img {
         height: 60px;
     }
 
-    .game-buttons button {
+    .game-buttons button, #new-word button {
         margin: 0.5em auto;
         width: 150px;
         height: 50px;
         display: block;
+    }
 
+    .warning img {
+        display: none;
     }
 
     footer {

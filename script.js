@@ -10,7 +10,7 @@ let sortedWordLetters;
 function chooseSecretWord() {
     let word = words[Math.floor(Math.random() * words.length)];
     secretWord = word;
-    console.log(secretWord);
+//    console.log(secretWord);
 }
 
 function addWord() {
