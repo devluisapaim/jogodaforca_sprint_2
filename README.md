@@ -16,6 +16,8 @@
 <img src="/img/jgforca.png/" alt="Imagem com link para o jogo"> </a>
 </p>
 
+<p>🖌️ Design do projeto no Figma: [aqui](https://www.figma.com/file/sH1hchG6lhwiVfV4pAfVgH/Alura-Challenge---Desafio-2---L%C3%B3gica-(Copy)?node-id=10%3A158).</p>
+
 ### :hammer: Funcionalidades do projeto
 - `Funcionalidade 1`: Tela inicial com botões: Começar a jogar | Adicionar nova palavra;
 - `Funcionalidade 2`: Adiciona novas palavras para serem sorteadas para o jogo;
