@@ -21,7 +21,7 @@
 - `Funcionalidade 2`: Adiciona novas palavras para serem sorteadas para o jogo;
 - `Funcionalidade 3`: Reconhece a tecla clicada as acrescentando à palavra, caso correta, e ao descarte, caso incorreta;
 - `Funcionalidade 4`: Botões: para iniciar novo jogo (sorteando nova palavra) e Desistir do jogo (retornando à tela inicial);
-<!-- - `Funcionalidade 5`: Página responsiva e adaptada para diversas telas. -->
+- `Funcionalidade 5`: Página responsiva e adaptada para diversas telas.
 
 ### 👩‍💻Técnicas e tecnologias utilizadas
 - `Lógica de programação`
