@@ -19,7 +19,7 @@
 ### :hammer: Funcionalidades do projeto
 - `Funcionalidade 1`: Tela inicial com botões: Começar a jogar | Adicionar nova palavra;
 - `Funcionalidade 2`: Adiciona novas palavras para serem sorteadas para o jogo;
-- `Funcionalidade 3`: Reconhece a tecla clicada as acrescentando à palavra, caso correta, e ao descarte, caso incorreta;
+- `Funcionalidade 3`: Reconhece a tecla clicada a acrescentando à palavra, caso correta, e ao descarte, caso incorreta;
 - `Funcionalidade 4`: Botões: para iniciar novo jogo (sorteando nova palavra) e Desistir do jogo (retornando à tela inicial);
 - `Funcionalidade 5`: Página responsiva e adaptada para diversas telas.
 
@@ -27,6 +27,6 @@
 - `Lógica de programação`
 - `HTML`
 - `CSS`
-- `JavaScript`
+- `JavaScript (Canvas)`
 
 

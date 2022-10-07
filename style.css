@@ -144,7 +144,7 @@ footer li img {
     }
 }
 
-@media (max-width:428px) {
+@media (max-width:500px) {
     header img {
         width: 25%;
     }
@@ -165,6 +165,8 @@ footer li img {
         margin: 0.5em auto;
         width: 150px;
         height: 50px;
+        display: block;
+
     }
 
     footer {
