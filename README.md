@@ -14,7 +14,7 @@ O site já está no ar e você pode acessar aqui: [Jogo da Forca!](https://devlu
 <br />
 
 <p align="center">
-    <img src="/imgs/jgforca.png/" alt="Imagem da aplicação">
+    <img src="/img/jgforca.png/" alt="Imagem da aplicação">
 </p>
 
 <br />
