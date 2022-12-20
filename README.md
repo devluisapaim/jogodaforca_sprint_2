@@ -25,7 +25,7 @@ O site já está no ar e você pode acessar aqui: [Jogo da Forca!](https://devlu
 
 # 🧠 Contexto
 
-O objetivo era criar uma aplicação usando JavaScript, que permitisse codificar e decodificar mensagens a partir de códigos específicos.
+O objetivo era criar uma aplicação usando JavaScript para jogar o jogo da forca, permitindo adicionar novas palavras ao jogo.
 <br />
 
 
